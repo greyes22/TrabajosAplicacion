@@ -32,7 +32,7 @@ public class ArithmeticDemo {
         result2 += 8; // result2 is now 10
         result2 %= 7; // result2 is now 3
         System.out.println(result2);
-    
+
 
     /*
     2. Qué pasa al usar construcciones del tipo
@@ -41,7 +41,7 @@ public class ArithmeticDemo {
     int a = 5;
     int i = 3;
     a+=++i;
-    System.out.println(a);
+    System.out.println("el resultado de la parte 2 es: " + a);
 
     /* Funciona correctamente siguiendo la lógica de asignaciones:
          (a += X) = (a = a + X) y (++ i) = (i = i + 1)
@@ -49,6 +49,4 @@ public class ArithmeticDemo {
          (a+=++i) = (a = a + (i + 1))
         */
     }
-
-
 }
