@@ -6,7 +6,7 @@ calcular la suma de los números impares desde 0 hasta el número dado. Utilizar
 sentencias while o do-while.
 */
 
-public class Ejercicio1EquipoA{
+public class Ejercicio1EquipoB{
 
     public static boolean isPrime(long n) {
         boolean prime = true;

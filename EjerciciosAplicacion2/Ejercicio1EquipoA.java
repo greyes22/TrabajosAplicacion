@@ -27,7 +27,11 @@ public class Ejercicio1EquipoA {
         // factorial(3); esta linea es solo para testear el metodo.
     }
 
-    public static int factorial(int num){
-
+    public static int factorial(int num) {
+        int resultado = 1;
+        for (int i = 1; i <= num; i++) {
+            resultado = resultado * i;
+        }
+        return resultado;
     }
 }
