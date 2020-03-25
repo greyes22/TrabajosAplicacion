@@ -23,8 +23,8 @@ public class Ejercicio2EquipoB {
         }
     }
 
-    public static int sumaHastaPrimo(int n) {
-        int suma = 0;
+    public static long sumaHastaPrimo(long n) {
+        long suma = 0;
         int contador = 0;
         if (isPrime(n)) {
 
