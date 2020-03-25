@@ -6,7 +6,7 @@ calcular la suma de los números impares desde 0 hasta el número dado. Utilizar
 sentencias while o do-while.
 */
 
-public class Ejercicio1EquipoB{
+public class Ejercicio2EquipoB {
 
     public static boolean isPrime(long n) {
         boolean prime = true;
@@ -23,7 +23,32 @@ public class Ejercicio1EquipoB{
         }
     }
 
+    public static int sumaHastaPrimo(int n) {
+        int suma = 0;
+        int contador = 0;
+        if (isPrime(n)) {
+
+            while (contador <= n) {
+                if (contador % 2 == 0) {
+                    suma += contador;
+                }
+                contador++;
+            }
+        } else {
+            while (contador <= n) {
+                if (contador % 2 != 0) {
+                    suma += contador;
+                }
+                contador++;
+            }
+        }
+        return suma;
+    }
+
     public static void main(String[] args) {
+
+        System.out.println(sumaHastaPrimo(7)); // Debe ser 12 ya que es primo.
+        System.out.println(sumaHastaPrimo(6)); // Debe ser 9 ya que no es primo.
 
     }
 }
