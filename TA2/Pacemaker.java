@@ -20,6 +20,9 @@ public class Pacemaker{
     private double remainingBattery; // 8 bytes
     private char manufacturerCode1, manufacturerCode2, manufacturerCode3, manufacturerCode4;
     private char manufacturerCode5, manufacturerCode6, manufacturerCode7, manufacturerCode8; // 2*8 bytes
+    // para el caso de las variables manufacturerCode, tambien pensamos en crear una lista de chars, de este modo
+    // podriamos estar guardando el codigo del fabricante en una sola variable, sin embargo, estariamos utilizando una
+    // lista, la cual no pertenece a un tipo de dato primitivo.
     }
 
     /*
