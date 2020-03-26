@@ -10,7 +10,7 @@ espacio ocupado por las variables indicadas).
 c) Responder las preguntas presentadas en pantalla
 */
 
-public class Pacemaker{
+public class Pacemaker {
 
     private short bloodPressure; // 2 bytes
     private short heartRate; // 2 bytes
@@ -20,12 +20,18 @@ public class Pacemaker{
     private double remainingBattery; // 8 bytes
     private char manufacturerCode1, manufacturerCode2, manufacturerCode3, manufacturerCode4;
     private char manufacturerCode5, manufacturerCode6, manufacturerCode7, manufacturerCode8; // 2*8 bytes
-    // para el caso de las variables manufacturerCode, tambien pensamos en crear una lista de chars, de este modo
-    // podriamos estar guardando el codigo del fabricante en una sola variable, sin embargo, estariamos utilizando una
-    // lista, la cual no pertenece a un tipo de dato primitivo.
-    }
-
     /*
-    en total podemos calcular cuanto ocupa en memoria un objeto de la clase Marcapasos unicamente teniendo en cuenta
-    sus atributos sumando: 2 + 2 + 2 + 8 + 4 + 8 + 16 = 42 bytes
-    */
+     * para el caso de las variables manufacturerCode, tambien pensamos en crear una
+     * lista de chars, de este modo podriamos estar guardando el codigo del
+     * fabricante en una sola variable, sin embargo, estariamos utilizando una
+     * lista, la cual no pertenece a un tipo de dato primitivo. Por lo tanto
+     * decidimos respaldarnos en la letra del ejercicio por lo que creamos 8
+     * variables de tipo char.
+     */
+}
+
+/*
+ * en total podemos calcular cuanto ocupa en memoria un objeto de la clase
+ * Marcapasos unicamente teniendo en cuenta sus atributos sumando: 2 + 2 + 2 + 8
+ * + 4 + 8 + 16 = 42 bytes
+ */
