@@ -1,3 +1,5 @@
+package TA1;
+
 public class PruebaAtributos {
     /*
      * 1. Cree un pequeño programa (clase “PruebaAtributos”) que defina algunos
@@ -13,7 +15,7 @@ public class PruebaAtributos {
      * convención indica que los nombres de los atributos deben comenzar con una
      * letra en minuscula.
      */
-   
+
 
     private int number = 1;
     private String Name = "Nombre";
@@ -25,7 +27,7 @@ public class PruebaAtributos {
     /*
      * 2. Extienda el programa para que imprima los valores de los atributos. Deje
      * los atributos sin inicializar y observe qué sucede al ejecutar.
-     * 
+     *
      * Respuesta: Al imprimir los atributos sin inicializar, se muestra que por
      * defecto, los atributos son apuntados a null.
      */
@@ -34,9 +36,9 @@ public class PruebaAtributos {
      * 3. Intente lo mismo con variables locales y vea qué errores de compilador
      * puede producir (Familiarizarse con los errores comunes de compilación va a
      * hacer que le sea más fácil reconocer bugs en su código.)
-     * 
+     *
      * Respuesta: Sin inicializar las variables locales, se le asigna a String: null, int: 0, boolean: false.
-     * 
+     *
      */
 
     // Variables locales Parte 3.

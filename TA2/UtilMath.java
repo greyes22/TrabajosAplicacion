@@ -1,3 +1,5 @@
+package TA2;
+
 /*
 Ejercicios #1 y #2
 Para realizar estos ejercicios, cada Equipo se dividirá en dos subequipos, “A” y “B”. El subequipo
@@ -20,8 +22,8 @@ public class UtilMath {
 
     public static void main(String[] args) {
         factorial(3); // esta linea es solo para testear el metodo.
-        System.out.println(sumaHastaPrimo(7)); // Debe ser 12 ya que es primo.
-        System.out.println(sumaHastaPrimo(6)); // Debe ser 9 ya que no es primo.
+        System.out.println(calculateSum(7)); // Debe ser 12 ya que es primo.
+        System.out.println(calculateSum(6)); // Debe ser 9 ya que no es primo.
     }
 
     /*
@@ -30,11 +32,11 @@ public class UtilMath {
      * únicamente bucles for. Si N=3 entonces factorial(N) = 3.2.1 = 6
      */
     public static int factorial(int num) {
-        int resultado = 1;
+        int result = 1;
         for (int i = 1; i <= num; i++) {
-            resultado = resultado * i;
+            result = result * i;
         }
-        return resultado;
+        return result;
     }
 
     /*
@@ -59,25 +61,25 @@ public class UtilMath {
         }
     }
 
-    public static long sumaHastaPrimo(long n) {
-        long suma = 0;
-        int contador = 0;
+    public static long calculateSum(long n) {
+        long sum = 0;
+        int cont = 0;
         if (isPrime(n)) {
 
-            while (contador <= n) {
-                if (contador % 2 == 0) {
-                    suma += contador;
+            while (cont <= n) {
+                if (cont % 2 == 0) {
+                    sum += cont;
                 }
-                contador++;
+                cont++;
             }
         } else {
-            while (contador <= n) {
-                if (contador % 2 != 0) {
-                    suma += contador;
+            while (cont <= n) {
+                if (cont % 2 != 0) {
+                    sum += cont;
                 }
-                contador++;
+                cont++;
             }
         }
-        return suma;
+        return sum;
     }
 }

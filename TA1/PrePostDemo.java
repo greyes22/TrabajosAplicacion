@@ -1,3 +1,5 @@
+package TA1;
+
 /* Ejercicio 2
  * 3. Analice el siguiente programa y observe su ejecución.
  */
