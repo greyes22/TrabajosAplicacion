@@ -15,12 +15,12 @@ public class PruebaAtributos {
      */
    
 
-    private int numero = 1;
-    private String Nombre1 = "Nombre";
-    private String $nombre = "$nombre";
-    private String _nombre;
-    private int altura;
-    private boolean estado;
+    private int number = 1;
+    private String Name = "Nombre";
+    private String $name = "$nombre";
+    private String _name;
+    private int height;
+    private boolean state;
 
     /*
      * 2. Extienda el programa para que imprima los valores de los atributos. Deje
@@ -40,31 +40,31 @@ public class PruebaAtributos {
      */
 
     // Variables locales Parte 3.
-    int ancho = 1;
-    int largo;
-    String apellido;
-    boolean estado1;
+    int width = 1;
+    int large;
+    String lastName;
+    boolean state1;
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         PruebaAtributos prueba = new PruebaAtributos();
-        System.out.println(prueba.Nombre1);
-        System.out.println(prueba.$nombre);
-        System.out.println(prueba.numero);
-        System.out.println(prueba._nombre + " - Atributo de tipo String sin inicializar");
-        System.out.println(prueba.altura + " - Atributo de tipo int sin inicializar");
-        System.out.println(prueba.estado + " - Atributo de tipo boolean sin inicializar");
+        System.out.println(prueba.Name);
+        System.out.println(prueba.$name);
+        System.out.println(prueba.number);
+        System.out.println(prueba._name + " - Atributo de tipo String sin inicializar");
+        System.out.println(prueba.height + " - Atributo de tipo int sin inicializar");
+        System.out.println(prueba.state + " - Atributo de tipo boolean sin inicializar");
 
         //Parte 3.
-        System.out.println(prueba.ancho + " - Variable local inicializada");
-        prueba.ancho = 2;
-        System.out.println (prueba.ancho + " - Cambio valor de variable local");
+        System.out.println(prueba.width + " - Variable local inicializada");
+        prueba.width = 2;
+        System.out.println (prueba.width + " - Cambio valor de variable local");
 
-        System.out.println(prueba.largo + " - Variable local de tipo int sin inicializar");
-        System.out.println(prueba.estado1 + " - Variable local de tipo boolean sin inicializar");
-        System.out.println(prueba.apellido + " - Variable local de tipo String sin inicializar");
+        System.out.println(prueba.large + " - Variable local de tipo int sin inicializar");
+        System.out.println(prueba.state1 + " - Variable local de tipo boolean sin inicializar");
+        System.out.println(prueba.lastName + " - Variable local de tipo String sin inicializar");
 
     }
 
