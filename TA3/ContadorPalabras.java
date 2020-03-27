@@ -57,9 +57,8 @@ public class ContadorPalabras {
      * contador "consonante" luego asignamos el valor de los contadores a las
      * variables de instancia para luego consutarlas mediante los getters.
      *
-     * COMENTARIOS DEL SUBEQUIPO B
-     * hemos renombrado el nombre del metodo ya que debe comenzar con minuscula y ademas es recomendable que los nombres
-     * sean verbos
+     * COMENTARIOS DEL SUBEQUIPO B hemos renombrado el nombre del metodo ya que debe
+     * comenzar con minuscula y ademas es recomendable que los nombres sean verbos
      */
     public void contarVocalesYConsonantes(String frase) {
         int vocales = 0;
@@ -84,9 +83,8 @@ public class ContadorPalabras {
      * cantidad de palabras que tienen una mayor cantidad de caracteres a los
      * especificados.
      *
-     * COMENTARIOS DEL SUBEQUIPO A
-     * hemos renombrado el nombre del metodo ya que debe comenzar con minuscula y ademas es recomendable que los nombres
-     * sean verbos
+     * COMENTARIOS DEL SUBEQUIPO A hemos renombrado el nombre del metodo ya que debe
+     * comenzar con minuscula y ademas es recomendable que los nombres sean verbos
      */
     public int contarPalabrasMayores(String texto, int caracterMayor) {
         if (texto == null || texto.isEmpty()) {
@@ -131,24 +129,23 @@ public class ContadorPalabras {
             File archivo = new File(txt);
             FileReader fr = new FileReader(archivo);
             BufferedReader br = new BufferedReader(fr);
+            br.mark(1000000); // necesario para usar reset()
 
             String lineaActual = br.readLine();
             while (lineaActual != null) {
                 contadorLineas += 1;
                 lineaActual = br.readLine();
             }
-            br.close();
+            br.reset(); // de alguna manera volvemos al inicio del archivo para recorrerlo nuevamente
 
-            FileReader fr2 = new FileReader(archivo);
-            BufferedReader br2 = new BufferedReader(fr2);
             String[] lineasArchivo = new String[contadorLineas];
 
-            String lineasiguiente = br2.readLine();
+            lineaActual = br.readLine();
             for (int i = 0; i < lineasArchivo.length; i++) {
-                lineasArchivo[i] = lineasiguiente;
-                lineasiguiente = br2.readLine();
+                lineasArchivo[i] = lineaActual;
+                lineaActual = br.readLine();
             }
-            br2.close();
+            br.close();
             return lineasArchivo;
 
         } catch (Exception e) {
@@ -172,7 +169,8 @@ public class ContadorPalabras {
     }
 }
 
-// clase que contiene el metodo main en el cual estaremos testeando nuestro programa con cada uno de sus metodos.
+// clase que contiene el metodo main en el cual estaremos testeando nuestro
+// programa con cada uno de sus metodos.
 class Principal {
     public static void main(String[] args) {
         ContadorPalabras prueba = new ContadorPalabras();
@@ -185,6 +183,5 @@ class Principal {
 
         System.out.println("Cantidad de palabras: " + prueba.CantidadPalabras(prueba.ObtenerLineasDeArchivo(
                 "C:/Users/FIT/Desktop/UCU/Algoritmos I/RepoEjerciciosAplicacion/TrabajosAplicacion/TA3/archivoPrueba.txt")));
-
     }
 }
